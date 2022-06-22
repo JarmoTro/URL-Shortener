@@ -17,7 +17,7 @@ exports.redirectUser = async (req,res) => {
 
 exports.createShortURL = async (req, res) => {
     if(utils.isAValidUrl(req.body.inputURL)){
-        const URL_obj = new URL({fullURL: req.body.inputURL});
+        const URL_obj = new URL({fullURL: req.body.inputURL, shortURL: utils.makeShortURLString()});
         await URL_obj.save();
         const shortURL = req.get('host')+"/"+URL_obj.shortURL
         const fullURL = URL_obj.fullURL;

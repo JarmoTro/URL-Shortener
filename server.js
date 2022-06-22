@@ -9,6 +9,7 @@ mongoose.connect('mongodb://localhost:27017/URL_Shortener',
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(mainRoutes);
+app.use(express.static('public'));
 
 port = 3000;
 app.listen(port, ()=> {

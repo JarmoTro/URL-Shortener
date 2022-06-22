@@ -5,10 +5,15 @@
     <form action="/shorten" method="POST" >
             <div class="card m-4">
                 <div class="card-body">
-                    <label class="form-label"><h3>Paste the URL to be shortened</h3></label>
-                    <input type="text" class="form-control" name="inputURL" placeholder="Paste the URL here">
+                    <div class="row">
+                        <div class="col-sm"></div>
+                        <div class="col-sm">
+                            <label class="form-label"><h3>Paste the URL to be shortened</h3></label>
+                            <input type="text" class="form-control" name="inputURL" placeholder="Paste the URL here">
+                            <button type="submit" class="btn btn-primary m-3">SHORTEN URL</button></div>
+                        <div class="col-sm"></div>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary m-3">SHORTEN URL</button>
             </div>
     </form>
 
@@ -23,7 +28,6 @@
         </p>
       </div>
     </div>
-    
 </div>
 
 <%-include('partials/footer')%>

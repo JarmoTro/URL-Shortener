@@ -1,13 +1,26 @@
 <%-include('partials/header', {DocumentTitle:'Shortened URL'})%>
 
+<script src="/js/copyToClipboard.js"></script>
+
 <div class="container">
     <div class="card m-4 text-center">
         <div class="card-body">
           <h3 class="card-title">Your shortened URL</h3>
-          <p class="card-text">
-            <input type="text" class="form-control text-center" value="<%= shortURL %>">
-            <h5> Original URL: <%= fullURL %> </h5>
+          <p class="card-text">            
+                <div class="row">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                        <div class="input-group">
+                            <input type="text" id="shortenedURL" class="form-control text-center" value="<%= shortURL %>">
+                            <button type="button" onclick="copyToClipboard()" class="btn btn-primary">COPY</button>
+                        </div>
+                    </div>
+                    <div class="col-sm"><div>
+                </div>
+            </div>
+            <h5 class="mb-4 mt-4"> Original URL: <%= fullURL %> </h5>
           </p>
+          <a href="/"><button type="button" class="btn btn-primary mb-3">CREATE A NEW URL</button></a>
         </div>
       </div>
 </div>
