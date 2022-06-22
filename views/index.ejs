@@ -1,12 +1,12 @@
 <%-include('partials/header', {DocumentTitle:'Home'})%>
 
-<div class="container text-center mb-4">
+<div class="container text-center">
 
-    <h1 class="m-4">URL Shortener</h1>
+    <h1 class="m-4">URL SHORTENER</h1>
 
     <form action="/shorten" method="POST" >
             
-            <div class="card">
+            <div class="card m-4">
                 <div class="card-body">
                     <label class="form-label"><h3>Paste the URL to be shortened</h3></label>
                     <input type="text" class="form-control" id="inputURL" placeholder="Paste the URL here">
@@ -15,6 +15,18 @@
             </div>
 
     </form>
+
+    <div class="card m-4">
+      <div class="card-body">
+        <h3 class="card-title">What is an URL shortener?</h3>
+        <p class="card-text">
+            An URL shortener allows you to turn long and unreadable links to
+            short and memorable links. <br>
+            Simply enter the long link into the form and press the SHORTEN URL button. <br>
+            On the next page you can copy the shortened URL and share it to your hearts content!
+        </p>
+      </div>
+    </div>
     
 </div>
 
