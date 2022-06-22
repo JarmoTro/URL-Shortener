@@ -1,0 +1,21 @@
+<%-include('partials/header', {DocumentTitle:'Home'})%>
+
+<div class="container text-center mb-4">
+
+    <h1 class="m-4">URL Shortener</h1>
+
+    <form action="/shorten" method="POST" >
+            
+            <div class="card">
+                <div class="card-body">
+                    <label class="form-label"><h3>Paste the URL to be shortened</h3></label>
+                    <input type="text" class="form-control" id="inputURL" placeholder="Paste the URL here">
+                </div>
+                <button type="submit" class="btn btn-primary m-3">SHORTEN URL</button>
+            </div>
+
+    </form>
+    
+</div>
+
+<%-include('partials/footer')%>
