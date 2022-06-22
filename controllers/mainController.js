@@ -1,4 +1,5 @@
 const URL = require('../models/URL');
+const utils = require('../utils')
 
 exports.getHomePage =  (req, res) => {
     res.render('index');
@@ -15,9 +16,14 @@ exports.redirectUser = async (req,res) => {
 };
 
 exports.createShortURL = async (req, res) => {
-    const URL_obj = new URL({fullURL: req.body.inputURL});
-    await URL_obj.save();
-    const shortURL = req.get('host')+"/"+URL_obj.shortURL
-    const fullURL = URL_obj.fullURL;
-    res.render('shortenedURL', {shortURL: shortURL, fullURL: fullURL});
+    if(utils.isAValidUrl(req.body.inputURL)){
+        const URL_obj = new URL({fullURL: req.body.inputURL});
+        await URL_obj.save();
+        const shortURL = req.get('host')+"/"+URL_obj.shortURL
+        const fullURL = URL_obj.fullURL;
+        res.render('shortenedURL', {shortURL: shortURL, fullURL: fullURL});
+    }
+    else{
+        res.render('invalidURL');
+    }
 }
