@@ -1,22 +1,21 @@
 <%-include('partials/header', {DocumentTitle:'Invalid URL'})%>
 
-<div class="container">
+<div class="container text-center">
 
-    <div class="card m-4">
+      <div class="card m-4">
         <div class="card-body">
           <h3 class="card-title">Looks like something went wrong :(</h3>
           <p class="card-text">
               <h5>Make sure that:</h5>
-              <ul>
+              <ul class="list-inline">
                 <li>The link is formatted correctly</li>
                 <li>The link includes protocols (http://, https://)</li>
                 <li>The link has correct punctuation</li>
               </ul>
           </p>
-          <a href="/"><button type="button" class="btn btn-primary">BACK</button></a>
+          <a href="/"><button type="button" class="btn btn-primary">RETURN TO HOME PAGE</button></a>
         </div>
       </div>
-
-</div>
-
+    </div>
+    
 <%-include('partials/footer')%>
