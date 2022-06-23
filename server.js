@@ -3,7 +3,7 @@ const mainRoutes = require('./routes/mainRoutes');
 const app = express();
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/URL_Shortener',
+mongoose.connect('mongodb+srv://jarmo:Password123@cluster0.jkhcl.mongodb.net/?retryWrites=true&w=majority',
 {useUnifiedTopology : true});
 
 app.set('view engine', 'ejs');
