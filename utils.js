@@ -2,6 +2,7 @@ const URL = require("url").URL;
 
 module.exports = {
     isAValidUrl: function(s){
+      if(s.length > 200) return false;
         try {
             new URL(s);
             return true;
